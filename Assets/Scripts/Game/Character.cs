@@ -13,14 +13,16 @@ public class Character : MonoBehaviour, ISaveable
     TriggerDetector triggerDetector;
     Animator animator;
     float visualDirection;
+    float scaleX;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         visualDirection = 1.0f;
         rigidBody2D = GetComponent<Rigidbody2D>();
         triggerDetector = GetComponentInChildren<TriggerDetector>();
         animator = GetComponentInChildren<Animator>();
+        scaleX = Visual.localScale.x;
     }
 
     public void MoveLeft()
@@ -55,14 +57,14 @@ public class Character : MonoBehaviour, ISaveable
         }
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         float vel = rigidBody2D.velocity.x;
 
         if (vel < -0.01f)
-            visualDirection = -1.0f;
+            visualDirection = -scaleX;
         else if (vel > 0.01f)
-            visualDirection = 1.0f;
+            visualDirection = scaleX;
 
         Vector3 scale = Visual.localScale;
         scale.x = visualDirection;

@@ -1974,7 +1974,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285132468675816855}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2008,6 +2008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Navigation.m_Mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191890278364811524, guid: 7372a324c07e2cd4d806ae9776849647,
+        type: 3}
+      propertyPath: m_text
+      value: Level 3
       objectReference: {fileID: 0}
     - target: {fileID: 2191890278758650660, guid: 7372a324c07e2cd4d806ae9776849647,
         type: 3}

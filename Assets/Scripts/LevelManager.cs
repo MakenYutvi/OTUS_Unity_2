@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : ILevelManager
 {
-    const int LevelCount = 2;
+    const int LevelCount = 5;
     string SaveFile => $"{Application.persistentDataPath}/SaveGame.txt";
     int CurrentLevel;
 
