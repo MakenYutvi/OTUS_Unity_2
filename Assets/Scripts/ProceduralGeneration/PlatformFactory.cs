@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -7,6 +7,9 @@ public sealed class PlatformFactory
 {
     private PlatformBehaviour _mainPlatform;
     private PlatformBehaviour _shortPlatform;
+    private PlatformBehaviour _AutumnHillPlatform;
+    private PlatformBehaviour _BevelRightPlatform;
+    private PlatformBehaviour _MovePlatform;
 
     public PlatformBehaviour GetPlatform(PlatformType type)
     {
@@ -18,6 +21,15 @@ public sealed class PlatformFactory
                 break;
             case PlatformType.Short:
                 prefab = GetShortPlatform();
+                break;
+            case PlatformType.BevelRight:
+                prefab = GetBevelRightPlatform();
+                break;
+            case PlatformType.AutumnHill:
+                prefab = GetAutumnHillPlatform();
+                break;
+            case PlatformType.Move:
+                prefab = GetMovePlatform();
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), type, null);
@@ -51,4 +63,41 @@ public sealed class PlatformFactory
 
         return _mainPlatform;
     }
+
+    private PlatformBehaviour GetBevelRightPlatform()
+    {
+        if (!_BevelRightPlatform)
+        {
+            _BevelRightPlatform =
+                Resources.Load<PlatformBehaviour>
+                    (AssetsPath.Platforms[PlatformType.BevelRight]);
+        }
+
+        return _BevelRightPlatform;
+    }
+
+    private PlatformBehaviour GetAutumnHillPlatform()
+    {
+        if (!_AutumnHillPlatform)
+        {
+            _AutumnHillPlatform =
+                Resources.Load<PlatformBehaviour>
+                    (AssetsPath.Platforms[PlatformType.AutumnHill]);
+        }
+
+        return _AutumnHillPlatform;
+    }
+
+    private PlatformBehaviour GetMovePlatform()
+    {
+        if (!_MovePlatform)
+        {
+            _MovePlatform =
+                Resources.Load<PlatformBehaviour>
+                    (AssetsPath.Platforms[PlatformType.Move]);
+        }
+
+        return _MovePlatform;
+    }
+
 }

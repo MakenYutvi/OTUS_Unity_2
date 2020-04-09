@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 public static class AssetsPath
 {
@@ -7,6 +7,10 @@ public static class AssetsPath
     {
         {PlatformType.Main, "Platforms/Platforms_Main"},
         {PlatformType.Short, "Platforms/Platforms_Short"},
+        {PlatformType.BevelRight, "Platforms/Platforms_Bevel"},
+        {PlatformType.AutumnHill, "Platforms/Platforms_AutumnHill"},
+        {PlatformType.Move, "Platforms/Platforms_Move"},
+
     };
 
     public static readonly Dictionary<AdditionalObjectType, string> AdditionalObjects =

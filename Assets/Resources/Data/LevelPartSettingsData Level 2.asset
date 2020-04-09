@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a8ba31693a24613975db11d1ef52da2, type: 3}
-  m_Name: LevelPartSettingsData
+  m_Name: LevelPartSettingsData Level 2
   m_EditorClassIdentifier: 
-  _countPlatform: 100
+  _countPlatform: 76
   _isGenerateLastPlatform: 0
   _firstPlatform:
     Type: 2
@@ -46,8 +46,8 @@ MonoBehaviour:
       Min: 0
       Max: 0
     AdditionalObjectData:
-      Type: 0
-      CreationProbability: 0
+      Type: 1
+      CreationProbability: 31
   - Type: 2
     RandomHeight: {x: -6, y: 0}
     RandomMargin:
@@ -71,7 +71,7 @@ MonoBehaviour:
       Max: 3
     AdditionalObjectData:
       Type: 3
-      CreationProbability: 100
+      CreationProbability: 26
   - Type: 4
     RandomHeight: {x: -5, y: 5}
     RandomMargin:
@@ -83,11 +83,11 @@ MonoBehaviour:
   - Type: 5
     RandomHeight: {x: -5, y: 5}
     RandomMargin:
-      Min: 1
-      Max: 3
+      Min: 0.06
+      Max: 4.45
     AdditionalObjectData:
-      Type: 3
-      CreationProbability: 2
+      Type: 2
+      CreationProbability: 66
   - Type: 1
     RandomHeight: {x: -5, y: 5}
     RandomMargin:
