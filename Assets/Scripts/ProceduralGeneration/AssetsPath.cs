@@ -19,5 +19,6 @@ public static class AssetsPath
             {AdditionalObjectType.Saw, "Traps/Traps_Saw"},
             {AdditionalObjectType.AidKit, "Bonuses/Bonuses_AidKit"},
             {AdditionalObjectType.Coin, "Bonuses/Bonuses_Coin"},
+            {AdditionalObjectType.CannonBall, "Traps/Traps_CannonBall"},
         };
 }

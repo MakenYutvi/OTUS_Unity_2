@@ -8,8 +8,8 @@ public class Death : MonoBehaviour
 
         public void OnTriggerEnter2D(Collider2D collision)
         {
-       // Debug.Log(collision.gameObject.tag);
-        //Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.tag);
+       // Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))    
         {
             Player.GameOver();

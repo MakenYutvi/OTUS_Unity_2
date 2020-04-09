@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -8,6 +8,7 @@ public sealed class AdditionalObjectFactory
     private GameObject _saw;
     private GameObject _aidKit;
     private GameObject _coin;
+    private GameObject _cannonBall;
 
     public GameObject GetAdditionalObject(AdditionalObjectType type)
     {
@@ -22,6 +23,9 @@ public sealed class AdditionalObjectFactory
                 break;
             case AdditionalObjectType.Coin:
                 prefab = GetCoin();
+                break;
+            case AdditionalObjectType.CannonBall:
+                prefab = GetCannonBall();
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), type, null);
@@ -64,5 +68,17 @@ public sealed class AdditionalObjectFactory
         }
 
         return _saw;
+    }
+
+    private GameObject GetCannonBall()
+    {
+        if (!_cannonBall)
+        {
+            _cannonBall =
+                Resources.Load<GameObject>
+                    (AssetsPath.AdditionalObjects[AdditionalObjectType.CannonBall]);
+        }
+
+        return _cannonBall;
     }
 }

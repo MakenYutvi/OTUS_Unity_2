@@ -94,5 +94,5 @@ MonoBehaviour:
       Min: 1
       Max: 3
     AdditionalObjectData:
-      Type: 3
-      CreationProbability: 34
+      Type: 4
+      CreationProbability: 94
