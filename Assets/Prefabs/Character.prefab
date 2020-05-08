@@ -178,8 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Visual: {fileID: 8740915254986117710}
-  MoveForce: 5
-  JumpForce: 50
+  MoveForce: 1
+  JumpForce: 5
 --- !u!114 &8740915254352961833
 MonoBehaviour:
   m_ObjectHideFlags: 0

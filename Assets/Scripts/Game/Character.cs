@@ -28,13 +28,13 @@ public class Character : MonoBehaviour, ISaveable
     public void MoveLeft()
     {
         //if (triggerDetector.InTrigger)
-            rigidBody2D.AddForce(new Vector2(-MoveForce, 0), ForceMode2D.Force);
+            rigidBody2D.AddForce(new Vector2(-MoveForce, 0), ForceMode2D.Impulse);
     }
 
     public void MoveRight()
     {
         //if (triggerDetector.InTrigger)
-            rigidBody2D.AddForce(new Vector2(MoveForce, 0), ForceMode2D.Force);
+            rigidBody2D.AddForce(new Vector2(MoveForce, 0), ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -52,7 +52,7 @@ public class Character : MonoBehaviour, ISaveable
     public void Jump()
     {
         if (triggerDetector.InTrigger) {
-            rigidBody2D.AddForce(new Vector2(0, JumpForce), ForceMode2D.Force);
+            rigidBody2D.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             transform.SetParent(null);
         }
     }

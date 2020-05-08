@@ -49,6 +49,7 @@ public class LevelManager : ILevelManager
 
     public void SwitchToNextLevel()
     {
+        CurrentLevel = SceneManager.GetActiveScene().buildIndex -1 ;
         ++CurrentLevel;
         SaveCurrentLevel();
         PlayCurrentLevel();
